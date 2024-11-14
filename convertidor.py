@@ -28,6 +28,9 @@ def convertidor_de_monedas(valor, moneda_origen, moneda_destino):
             return convertir_pesos_a_euros(valor)
         if moneda_destino == "YEN":
             return convertir_pesos_a_yenes(valor)
+        else:
+            print("Moneda destino no válida.")
+            return 0
     else:
         if moneda_origen == "USD":
             return convertir_dolares_a_pesos(valor)
@@ -35,6 +38,9 @@ def convertidor_de_monedas(valor, moneda_origen, moneda_destino):
             return convertir_euros_a_pesos(valor)
         if moneda_origen == "YEN":
             return convertir_yenes_a_pesos(valor)
+        else:
+            print("Moneda origen no válida.")
+            return 0
 
 if __name__ == "__main__":
     print("¡Bienvenido al conversor de monedas!")
